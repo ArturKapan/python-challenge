@@ -65,14 +65,27 @@ with open(file_path, "r") as csv_file:
     the_worse_month = months[monthly_loss_profit_changes.index(greatest_decrease)]
 
 
-print(f''' ``` Text 
+print(f''' ``` Text\n 
 Financial Analysis
-________________________________
+________________________________\n
 Total Months: {total_months}
 Total:  ${net_total_amount}  
-Average Change:${ave_changes} 
-Greatest Increase in Profits: {best_month} (${greatest_increase} )
-Greatest Decrease in Profits: {the_worse_month} (${greatest_decrease})
+Average Change:${ave_changes} \n
+Greatest Increase in Profits: {best_month} (${greatest_increase} )\n
+Greatest Decrease in Profits: {the_worse_month} (${greatest_decrease})\n
+````''')
+
+
+pybank = 'analysis/PyBank.txt'
+with open(pybank,'w') as outfile:
+    outfile.write(f'''``` Text\n 
+Financial Analysis
+________________________________\n
+Total Months: {total_months}
+Total:  ${net_total_amount}  
+Average Change:${ave_changes} \n
+Greatest Increase in Profits: {best_month} (${greatest_increase} )\n
+Greatest Decrease in Profits: {the_worse_month} (${greatest_decrease})\n
 ````''')
     
 
